@@ -54,4 +54,5 @@ public class MovieController {
     public ResponseEntity<Map<String,Object>> searchMovieByCategory(@PathVariable MovieCategory category){
         return movieService.searchMovieByCategory(category);
     }
+
 }
