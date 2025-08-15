@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface MovieRepository extends JpaRepository<MovieEntity,Integer> {
 
-    List<MovieEntity> findByCategoryOrderByCreatedAtDesc(MovieCategory category);
-
     Optional<MovieEntity> findByMovieNameContainingIgnoreCase(String name);
+
+    List<MovieEntity> findByCategoryOrderByCreatedAtDesc(MovieCategory category);
 }

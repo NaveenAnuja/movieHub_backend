@@ -9,5 +9,4 @@ public enum MovieCategory {
     ROMANCE,
     THRILLER,
     ANIMATION,
-    DOCUMENTARY
 }

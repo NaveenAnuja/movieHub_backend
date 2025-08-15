@@ -87,9 +87,9 @@ public class MovieServiceImpl implements MovieService {
 
         validateImageUrl(request.getImageUrl());
 
-        movie.setMovieName(request.getMovieName());
         movie.setDescription(request.getDescription());
         movie.setRate(request.getRate());
+        movie.setCategory(request.getCategory());
         movie.setImageUrl(request.getImageUrl());
 
         MovieEntity updatedMovie = movieRepository.save(movie);

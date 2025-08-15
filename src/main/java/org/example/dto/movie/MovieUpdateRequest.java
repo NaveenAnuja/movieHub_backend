@@ -12,13 +12,13 @@ import org.example.entity.constants.MovieCategory;
 @NoArgsConstructor
 public class MovieUpdateRequest {
 
-    @NotBlank
-    private String movieName;
     @NotNull
     private String description;
     @NotBlank
     private String rate;
     @NotBlank
     private String imageUrl;
+    @NotNull
+    private MovieCategory category;
 
 }
