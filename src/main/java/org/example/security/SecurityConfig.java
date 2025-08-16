@@ -29,28 +29,29 @@ public class SecurityConfig {
             "/api/user/register/user",
             "/api/user/login",
             "/api/user/view/users",
-            "/api/user/update/user/{id}",
             "/api/user/search-by-id/{id}",
             "/api/user/search-by-email/{email}",
-            "/api/user/delete/user/{id}",
 
-            "/api/movie/add/movie",
-            "/api/movie/update/movie/{id}",
-            "/api/movie/delete/movie/{id}",
             "/api/movie/view/movies/page/{page}/size/{size}",
             "/api/movie/search-by-id/{id}",
             "/api/movie/search-by-name/{name}",
             "/api/movie/search-by-category/{category}",
 
-            "/api/suggestion/add/suggestions",
-            "/api/suggestion/update/suggestion/{id}",
-            "/api/suggestion/delete/suggestion/{id}",
-            "/api/suggestion/search/suggestion-by-id/{id}",
             "/api/suggestion/view/suggestions",
+            "/api/suggestion/search/suggestion-by-id/{id}",
     };
 
     private final String[] tempArray = {
-            //
+            "/api/user/delete/user/{id}",
+            "/api/user/update/user/{id}",
+
+            "/api/movie/add/movie",
+            "/api/movie/update/movie/{id}",
+            "/api/movie/delete/movie/{id}",
+
+            "/api/suggestion/add/suggestions",
+            "/api/suggestion/update/suggestion/{id}",
+            "/api/suggestion/delete/suggestion/{id}",
     };
 
     @Bean
