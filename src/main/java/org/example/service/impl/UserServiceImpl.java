@@ -126,8 +126,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<Map<String, Object>> getAllUsers() {
-        List<UserEntity> users = userRepository.findAll();
+    public ResponseEntity<Map<String, Object>> getAllUsers(Role role) {
+        List<UserEntity> users = userRepository.findAllByRoleIsNot(Role.ADMIN);
 
         List<UserRequest> userDTOs = users.stream()
                 .map(this::mapEntityToRequest)

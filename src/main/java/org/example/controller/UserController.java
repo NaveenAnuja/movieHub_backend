@@ -6,6 +6,7 @@ import org.example.dto.user.LoginRequest;
 import org.example.dto.user.LoginResponse;
 import org.example.dto.user.UserRequest;
 import org.example.dto.user.UserUpdateRequest;
+import org.example.entity.constants.Role;
 import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,9 +33,9 @@ public class UserController {
     }
 
     @GetMapping("/view/users")
-    public ResponseEntity<Map<String,Object>> getAllUsers(){
+    public ResponseEntity<Map<String,Object>> getAllUsers(Role role){
 
-        return userService.getAllUsers();
+        return userService.getAllUsers(role);
     }
 
     @PutMapping("/update/user/{id}")
@@ -56,4 +57,5 @@ public class UserController {
     public ResponseEntity<UserRequest> searchUserByMail(@PathVariable String email){
         return userService.searchUserByMail(email);
     }
+
 }

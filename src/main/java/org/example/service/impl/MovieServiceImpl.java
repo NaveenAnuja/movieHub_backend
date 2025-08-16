@@ -54,7 +54,6 @@ public class MovieServiceImpl implements MovieService {
             throw new IllegalArgumentException(source.getMessage("Image URL cannot be empty", null, Locale.ENGLISH));
         }
 
-        // Optional: Basic format validation
         if (!imageUrl.matches("^(http|https)://.*$")) {
             throw new IllegalArgumentException(source.getMessage("Invalid image URL format", null, Locale.ENGLISH));
         }
